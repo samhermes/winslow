@@ -1,0 +1,26 @@
+{
+  "name": "winslow",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samhermes/winslow.git"
+  },
+  "author": "Sam Hermes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samhermes/winslow/issues"
+  },
+  "homepage": "https://github.com/samhermes/winslow#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "merge-stream": "^1.0.1"
+  }
+}
