@@ -1144,7 +1144,6 @@ a:focus {
 }
 
 .entry-meta {
-  font-family: 'Work Sans', sans-serif;
   font-size: 0.9em;
   font-weight: 400;
   color: #595959;
@@ -1436,7 +1435,6 @@ a:focus {
 
 .home-featured .read-more {
   text-transform: uppercase;
-  font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   font-size: 0.9em;
 }
