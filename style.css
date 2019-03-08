@@ -911,7 +911,7 @@ a:focus {
 }
 
 .site-footer {
-  border-top: 1px solid #eee;
+  background: #eee;
   padding: 0 1.2em;
 }
 
