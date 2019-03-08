@@ -14,7 +14,7 @@
 }
 
 .entry-header {
-	max-width: 72em;
+	max-width: 50em;
 	margin: 1.5rem auto;
 	width: 90%;
 }
@@ -86,9 +86,15 @@
 }
 
 .page-content,
-.entry-content,
-.entry-summary {
+.entry-content {
 	font-size: 1.1em;
+
+	> * {
+		width: 90%;
+		max-width: 50rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
 	h1 {
 		font-size: 1.602em;
@@ -127,7 +133,7 @@
 }
 
 .entry-footer {
-	max-width: 72em;
+	max-width: 50em;
 	margin: 1.5rem auto;
 	width: 90%;
 }
