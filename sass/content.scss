@@ -89,7 +89,7 @@
 .entry-content {
 	font-size: 1.1em;
 
-	> * {
+	> *:not(.alignfull) {
 		width: 90%;
 		max-width: 50rem;
 		margin-left: auto;

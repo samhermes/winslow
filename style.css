@@ -1184,8 +1184,8 @@ a:focus {
   font-size: 1.1em;
 }
 
-.page-content > *,
-.entry-content > * {
+.page-content > *:not(.alignfull),
+.entry-content > *:not(.alignfull) {
   width: 90%;
   max-width: 50rem;
   margin-left: auto;
