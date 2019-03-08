@@ -12,10 +12,10 @@
 }
 
 .site-branding {
-	text-align: center;
 	padding: 2.5em 0;
-	width: 90%;
 	margin: 0 auto;
+	width: 90%;
+	max-width: 72em;
 	color: #404040;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .site-title a {
-	font-size: 2.5em;
+	font-size: 2em;
 	font-weight: 600;
 	color: inherit;
 	text-decoration: none;
@@ -43,7 +43,7 @@
 	}
 
 	.site-title a {
-		font-size: 3em;
+		font-size: 2.5em;
 	}
 }
 
@@ -74,7 +74,6 @@
 	width: 100%;
 	background: #fff;
 	border-bottom: 1px solid #eee;
-	text-align: center;
 }
 
 .stick {
@@ -86,12 +85,17 @@
 .main-navigation ul {
 	display: none;
 	list-style: none;
-	margin: 0;
-	padding: 0.43em 4em;
+	margin: 0 auto;
+	padding: 0.43em 0;
+	max-width: 72em;
 }
 
 .main-navigation li {
 	background: #fff;
+
+	&:first-child {
+		margin-left: -20px;
+	}
 }
 
 @media screen and (min-width: $break-37) {
