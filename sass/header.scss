@@ -1,10 +1,6 @@
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-.site-header {
-	border-bottom: 1px solid #eee;
-}
-
 .site-header[style] {
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -74,8 +70,7 @@
 .main-navigation {
 	position: relative;
 	width: 100%;
-	background: #fff;
-	border-bottom: 1px solid #eee;
+	background: #eee;
 }
 
 .stick {
@@ -90,6 +85,7 @@
 	margin: 0 auto;
 	padding: 0.43em 0;
 	max-width: 72em;
+	width: 90%;
 }
 
 .main-navigation li {

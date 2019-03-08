@@ -627,10 +627,6 @@ a:focus {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-.site-header {
-  border-bottom: 1px solid #eee;
-}
-
 .site-header[style] {
   background-repeat: no-repeat;
   background-size: cover;
@@ -701,8 +697,7 @@ a:focus {
 .main-navigation {
   position: relative;
   width: 100%;
-  background: #fff;
-  border-bottom: 1px solid #eee;
+  background: #eee;
 }
 
 .stick {
@@ -717,6 +712,7 @@ a:focus {
   margin: 0 auto;
   padding: 0.43em 0;
   max-width: 72em;
+  width: 90%;
 }
 
 .main-navigation li:first-child {
@@ -973,20 +969,6 @@ a:focus {
 }
 
 /*--------------------------------------------------------------
-## Layout
---------------------------------------------------------------*/
-@media screen and (min-width: 56.25em) {
-  .single .content-area {
-    float: left;
-    width: 65%;
-  }
-  .single .site-content .widget-area {
-    float: right;
-    width: 25%;
-  }
-}
-
-/*--------------------------------------------------------------
 # Post Layouts
 --------------------------------------------------------------*/
 .archive .content-area,
@@ -1121,6 +1103,12 @@ a:focus {
   font-weight: 400;
 }
 
+.entry-header {
+  max-width: 72em;
+  margin: 1.5rem auto;
+  width: 90%;
+}
+
 .single .entry-header {
   margin-bottom: 2em;
 }
@@ -1252,7 +1240,9 @@ a:focus {
 }
 
 .entry-footer {
-  font-family: 'Work Sans', sans-serif;
+  max-width: 72em;
+  margin: 1.5rem auto;
+  width: 90%;
 }
 
 .page-links {
