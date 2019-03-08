@@ -41,12 +41,6 @@ body.block-editor-page .editor-post-title__input {
   }
 }
 
-body.block-editor-page .editor-post-title__block,
-body.block-editor-page .editor-default-block-appender,
-body.block-editor-page .editor-block-list__block {
-  max-width: 46.125rem;
-}
-
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
   max-width: 8rem;
 }

@@ -92,6 +92,11 @@ function winslow_setup() {
 			),
 		)
 	);
+
+	/*
+	 * Add support for wide alignment setting on blocks.
+	 */
+	add_theme_support( 'align-wide' );
 }
 endif;
 add_action( 'after_setup_theme', 'winslow_setup' );
