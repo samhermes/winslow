@@ -28,5 +28,4 @@ get_header(); ?>
 	</div>
 
 <?php
-get_sidebar( 'posts' );
 get_footer();
