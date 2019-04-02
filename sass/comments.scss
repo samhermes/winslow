@@ -1,6 +1,12 @@
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+.comments-area {
+	max-width: 50em;
+	margin: 1.5rem auto;
+	width: 90%;
+}
+
 .comment-toggle {
 	border: 1px solid #808080;
 	background: none;
