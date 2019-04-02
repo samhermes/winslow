@@ -135,7 +135,7 @@ add_action( 'after_setup_theme', 'winslow_content_width', 0 );
 function winslow_scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
-	wp_enqueue_style( 'winslow-work-sans', 'https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,600,600i|Montserrat|Source+Serif+Pro' );
+	wp_enqueue_style( 'winslow-work-sans', 'https://fonts.googleapis.com/css?family=Heebo:300,400,500' );
 	wp_enqueue_style( 'winslow-style', get_stylesheet_uri(), array(), $theme_version );
 
 	wp_enqueue_script( 'winslow-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'winslow-stickyfill' ), '20160908', true );

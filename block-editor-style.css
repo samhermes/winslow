@@ -2,7 +2,7 @@
  * Block editor stylesheet
 */
 body.block-editor-page .edit-post-visual-editor {
-  font-family: 'Libre Franklin', serif;
+  font-family: 'Heebo', sans-serif;
 }
 
 body.block-editor-page .edit-post-visual-editor .wp-block-paragraph {
@@ -29,7 +29,7 @@ body.block-editor-page .edit-post-visual-editor ol {
 }
 
 body.block-editor-page .editor-post-title__input {
-  font-family: 'Libre Franklin', serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.1;

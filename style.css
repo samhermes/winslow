@@ -242,7 +242,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -649,13 +649,12 @@ a:focus {
   margin: 0;
   font-size: 1em;
   line-height: 1;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .site-title a {
   font-size: 1.5em;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-weight: 300;
+  letter-spacing: 0.08em;
   color: inherit;
   text-decoration: none;
   text-transform: uppercase;
@@ -716,7 +715,7 @@ a:focus {
 }
 
 .main-navigation li:first-child {
-  margin-left: -20px;
+  margin-left: -1rem;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -729,11 +728,10 @@ a:focus {
 .main-navigation a {
   display: block;
   text-decoration: none;
-  text-transform: uppercase;
   line-height: 1;
-  padding: 8px 0 2px;
-  margin: 0 20px 3px;
-  font-size: 0.95em;
+  padding: 0.5rem 0 0.125rem;
+  margin: 0 1rem 0.18rem;
+  font-size: 1.15rem;
   color: #333;
   font-weight: 500;
 }
@@ -782,7 +780,7 @@ a:focus {
   }
   .main-navigation ul {
     display: block;
-    height: 2.75rem;
+    height: 2.8125rem;
   }
 }
 
@@ -928,9 +926,9 @@ a:focus {
 }
 
 .site-footer .widget-area {
-  max-width: 82em;
+  max-width: 74em;
   margin: 0 auto;
-  padding: 2.5em 0 1em;
+  padding: 2.5rem 0 1rem;
 }
 
 @media screen and (min-width: 50em) {
@@ -943,15 +941,14 @@ a:focus {
 }
 
 .site-footer .widget-area .widget-title {
-  margin: 0 0 0.75em;
-  font-size: 0.95em;
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
   color: #333;
   font-weight: 500;
-  text-transform: uppercase;
 }
 
 .site-footer .widget {
-  margin-bottom: 3em;
+  margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 50em) {
@@ -959,13 +956,13 @@ a:focus {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    margin: 0 1em 3em;
+    margin: 0 1rem 3rem;
   }
 }
 
 .site-footer .widget .search-field {
   -webkit-appearance: none;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
 }
 
 /*--------------------------------------------------------------
@@ -1776,51 +1773,6 @@ object {
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
 .infinity-end.neverending .site-footer {
   display: block;
-}
-
-/*--------------------------------------------------------------
-## Sidebar
---------------------------------------------------------------*/
-.latest-posts {
-  padding-top: 2em;
-}
-
-.latest-posts h2 {
-  font-weight: normal;
-  text-transform: uppercase;
-  font-size: 1.2em;
-  margin: 0 0 1.2em;
-}
-
-.latest-posts ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.latest-posts li {
-  margin-bottom: 2.5em;
-}
-
-.latest-posts li img {
-  display: block;
-  margin-bottom: 0.6em;
-}
-
-.latest-posts a {
-  text-decoration: none;
-  display: inline-block;
-}
-
-.latest-posts a:hover {
-  text-decoration: underline;
-}
-
-.latest-posts h3 {
-  font-family: 'Libre Franklin', serif;
-  font-weight: normal;
-  line-height: 1.3;
-  margin: 0 0 0.4em;
 }
 
 /*# sourceMappingURL=style.css.map */
