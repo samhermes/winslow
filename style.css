@@ -512,7 +512,7 @@ a:focus {
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
-.screen-reader-text {
+.screen-reader-text, .home.page .type-page .entry-title {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
@@ -526,7 +526,7 @@ a:focus {
   /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
-.screen-reader-text:focus {
+.screen-reader-text:focus, .home.page .type-page .entry-title:focus {
   background-color: #f1f1f1;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
@@ -587,13 +587,11 @@ a:focus {
 # Clearings
 --------------------------------------------------------------*/
 .clear:before, .site-footer .widget-area:before, .archive .hentry:before,
-.search .hentry:before, .intro-posts:before, .home-featured:before,
+.search .hentry:before,
 .clear:after,
 .site-footer .widget-area:after,
 .archive .hentry:after,
 .search .hentry:after,
-.intro-posts:after,
-.home-featured:after,
 .entry-content:before,
 .entry-content:after,
 .comment-content:before,
@@ -614,8 +612,6 @@ a:focus {
 .site-footer .widget-area:after,
 .archive .hentry:after,
 .search .hentry:after,
-.intro-posts:after,
-.home-featured:after,
 .entry-content:after,
 .comment-content:after,
 .site-header:after,
@@ -738,16 +734,6 @@ a:focus {
 
 .main-navigation a:hover {
   text-decoration: underline;
-}
-
-@media screen and (min-width: 37.5em) {
-  .main-navigation a {
-    border-bottom: 1px solid transparent;
-  }
-  .main-navigation a:hover {
-    text-decoration: none;
-    border-bottom-color: #333;
-  }
 }
 
 .menu-toggle {
@@ -970,29 +956,21 @@ a:focus {
 --------------------------------------------------------------*/
 .archive .content-area,
 .search .content-area {
-  max-width: 60em;
+  max-width: 72em;
   margin: 0 auto;
 }
 
 .archive .page-header,
 .search .page-header {
-  margin-bottom: 2.5em;
-}
-
-@media screen and (min-width: 37.5em) {
-  .archive .page-header,
-  .search .page-header {
-    margin-bottom: 3.25em;
-  }
+  margin: 3rem 0 2.5rem;
 }
 
 .archive .page-header .page-title,
 .search .page-header .page-title {
   margin: 0;
-  font-size: 1.3em;
-  font-weight: normal;
+  font-size: 1.3rem;
+  font-weight: 300;
   text-transform: uppercase;
-  text-align: center;
 }
 
 .archive .hentry,
@@ -1095,19 +1073,18 @@ a:focus {
   display: block;
 }
 
-.hentry {
-  margin: 0 0 1.5em;
-  font-weight: 400;
-}
-
 .entry-header {
   max-width: 50em;
   margin: 1.5rem auto;
   width: 90%;
 }
 
+.type-page .entry-header {
+  margin-top: 3rem;
+}
+
 .single .entry-header {
-  margin-bottom: 2em;
+  margin: 3rem auto 2rem;
 }
 
 .entry-title {
@@ -1329,198 +1306,8 @@ a:focus {
 /*--------------------------------------------------------------
 # Home
 --------------------------------------------------------------*/
-.blog .site-content {
-  padding: 0;
-}
-
-@media screen and (min-width: 37.5em) {
-  .blog .site-content {
-    max-width: 100%;
-  }
-}
-
-@media screen and (min-width: 50em) {
-  .blog .site-content {
-    padding: 2.2em 2em 0;
-  }
-}
-
-.intro-posts {
-  max-width: 80em;
-}
-
-@media screen and (min-width: 50em) {
-  .intro-posts {
-    padding: 0 0 2.2em;
-    margin: 0 auto 3em;
-  }
-}
-
-@media screen and (min-width: 59.375em) {
-  .intro-posts {
-    padding: 0 2.3em 2.2em;
-  }
-}
-
-.intro-posts a {
-  text-decoration: none;
-  display: inline-block;
-}
-
-.intro-posts a:hover {
-  text-decoration: underline;
-}
-
-.intro-posts .entry-title,
-.intro-posts .entry-meta,
-.intro-posts .entry-excerpt {
-  margin-left: 1.2rem;
-  margin-right: 1.2rem;
-}
-
-@media screen and (min-width: 37.5em) {
-  .intro-posts .entry-title,
-  .intro-posts .entry-meta,
-  .intro-posts .entry-excerpt {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-}
-
-@media screen and (min-width: 50em) {
-  .intro-posts .entry-title,
-  .intro-posts .entry-meta,
-  .intro-posts .entry-excerpt {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-.home-featured .wp-post-image {
-  display: block;
-  margin-bottom: 1em;
-}
-
-@media screen and (min-width: 50em) {
-  .home-featured .wp-post-image {
-    margin-bottom: 0;
-  }
-}
-
-.home-featured .entry-title {
-  font-size: 1.7em;
-  line-height: 1.125;
-  margin-bottom: 0.4em;
-  clear: none;
-}
-
-@media screen and (min-width: 50em) {
-  .home-featured .entry-title {
-    font-size: 2em;
-  }
-}
-
-.home-featured .entry-meta {
-  margin-bottom: 1.2em;
-}
-
-.home-featured .entry-excerpt {
-  margin-bottom: 0;
-}
-
-.home-featured .read-more {
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 0.9em;
-}
-
-.home-small .wp-post-image {
-  display: block;
-  margin-bottom: 0.8em;
-}
-
-.home-small .entry-title {
-  font-size: 1.3em;
-  line-height: 1.3;
-}
-
-.home-small .entry-meta {
-  font-size: 0.8em;
-}
-
-@media screen and (min-width: 50em) {
-  .home-featured {
-    margin: 0 0 3.125em -2.3em;
-  }
-  .home-featured .image-wrap {
-    float: left;
-    width: 55%;
-    margin-right: 3%;
-  }
-  .home-featured .detail-wrap {
-    float: left;
-    width: 42%;
-  }
-  .home-small {
-    width: 30.3333%;
-    float: left;
-    margin: 0 1.5%;
-  }
-}
-
-@media screen and (min-width: 62.5em) {
-  .home-featured .image-wrap {
-    float: left;
-    width: 60%;
-    margin-right: 3%;
-  }
-  .home-featured .detail-wrap {
-    float: left;
-    width: 37%;
-  }
-  .home-featured .entry-title {
-    padding-top: 8%;
-  }
-}
-
-.latest-feed {
-  max-width: 60em;
-  margin: 1em auto 0;
-  padding: 0 1.2em 3.5em;
-}
-
-@media screen and (min-width: 37.5em) {
-  .latest-feed {
-    padding-left: 2em;
-    padding-right: 2em;
-  }
-}
-
-@media screen and (min-width: 50em) {
-  .latest-feed {
-    padding: 0 0 3.5em;
-  }
-  .latest-feed .featured-image {
-    width: 29.34%;
-  }
-  .latest-feed .entry-header,
-  .latest-feed .entry-content {
-    width: 67.66%;
-  }
-}
-
-.latest-feed .latest-heading {
-  margin: 0 0 1.923em;
-  font-size: 1.3em;
-  font-weight: normal;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-@media screen and (min-width: 37.5em) {
-  .latest-feed .latest-heading {
-    margin-bottom: 2.5em;
-  }
+.home.page .type-page .entry-header {
+  margin: 0;
 }
 
 /*--------------------------------------------------------------

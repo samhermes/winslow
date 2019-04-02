@@ -8,19 +8,18 @@
 	display: block;
 }
 
-.hentry {
-	margin: 0 0 1.5em;
-	font-weight: 400;
-}
-
 .entry-header {
 	max-width: 50em;
 	margin: 1.5rem auto;
 	width: 90%;
-}
 
-.single .entry-header {
-	margin-bottom: 2em;
+	.type-page & {
+		margin-top: 3rem;
+	}
+
+	.single & {
+		margin: 3rem auto 2rem;
+	}
 }
 
 .entry-title {
