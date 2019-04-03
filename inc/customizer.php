@@ -14,6 +14,27 @@ function winslow_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+	$wp_customize->add_section( 'winslow_header' , array(
+		'title' => __( 'Header', 'winslow' ),
+		'priority' => 30,
+	) );
+
+	$wp_customize->add_setting( 'winslow_header_layout' , array(
+		'default' => 'stacked',
+		'transport' => 'refresh',
+	) );
+
+	$wp_customize->add_control( 'winslow_header_layout', array(
+		'label' => __( 'Layout', 'winslow' ),
+		'type' => 'select',
+		'choices' => array(
+			'stacked' => 'Stacked',
+			'condensed' => 'Condensed'
+		),
+		'section' => 'winslow_header',
+		'settings' => 'winslow_header_layout',
+	) );
 }
 add_action( 'customize_register', 'winslow_customize_register' );
 
