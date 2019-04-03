@@ -23,14 +23,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'winslow' ); ?></a>
 
-	<?php
-	$header_style = '';
-	if ( get_header_image() ) :
-		$header_background = get_header_image();
-		$header_style = ' style="background-image:url(' . esc_url( $header_background ) . ');"';
-	endif; ?>
-
-	<header id="masthead" class="site-header" role="banner"<?php echo $header_style; ?>>
+	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<?php
 			if ( has_custom_logo() ) :
