@@ -23,45 +23,42 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'winslow' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( has_custom_logo() ) :
-				the_custom_logo();
-			else :
-				if ( is_front_page() && is_home() ) : ?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php else : ?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-				endif;
-			endif;
+	<?php
+	$header_layout = get_theme_mod( 'winslow_header_layout' );
+	$header_layout_class = $header_layout == 'condensed' ? ' is-style-condensed' : ' is-style-stacked';
+	?>
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; ?></p>
-			<?php
-			endif; ?>
+	<header id="masthead" class="site-header<?php echo $header_layout_class; ?>" role="banner">
+		<div class="site-header-contain">
+			<div class="site-branding">
+				<?php
+				if ( has_custom_logo() ) :
+					the_custom_logo();
+				else :
+					if ( is_front_page() && is_home() ) : ?>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php else : ?>
+						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					<?php
+					endif;
+				endif;
+
+				$description = get_bloginfo( 'description', 'display' );
+				if ( $description || is_customize_preview() ) : ?>
+					<p class="site-description"><?php echo $description; ?></p>
+				<?php
+				endif; ?>
+			</div>
+
+			<?php if ( $header_layout === 'condensed' ) {
+				get_template_part( 'inc/main-navigation' );
+			} ?>
 		</div>
 	</header>
 
-	<?php
-		$sticky_header_class = '';
-		if ( ! is_admin_bar_showing() ) {
-			$sticky_header_class = ' stick';
-		}
-	?>
-
-	<nav id="site-navigation" class="main-navigation<?php echo $sticky_header_class; ?>" role="navigation">
-		<button type="button" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'winslow' ); ?></button>
-
-		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'depth' => 1 ) ); ?>
-
-		<button type="button" class="search-toggle">
-			<img src="<?php echo esc_url( get_template_directory_uri() . '/img/search.svg' ); ?>" alt="">
-			<span class="screen-reader-text"><?php esc_html_e( 'Search', 'winslow' ); ?></span>
-		</button>
-	</nav>
+	<?php if ( $header_layout === 'stacked' ) {
+		get_template_part( 'inc/main-navigation' );
+	} ?>
 
 	<div class="search-overlay">
 		<?php get_search_form(); ?>

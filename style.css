@@ -623,22 +623,18 @@ a:focus {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-.site-header[style] {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 .site-branding {
-  padding: 2.5em 0;
+  padding: 2.5rem 0;
   margin: 0 auto;
   width: 90%;
   max-width: 72em;
   color: #404040;
 }
 
-.site-header[style] .site-branding {
-  color: #fff;
+@media screen and (min-width: 37.5em) {
+  .site-branding {
+    padding: 2.75rem 0;
+  }
 }
 
 .site-title {
@@ -657,9 +653,6 @@ a:focus {
 }
 
 @media screen and (min-width: 37.5em) {
-  .site-branding {
-    padding: 2.75em 0;
-  }
   .site-title a {
     font-size: 2em;
   }
@@ -686,13 +679,53 @@ a:focus {
   }
 }
 
+/* Condensed header layout */
+.is-style-condensed .site-header-contain {
+  max-width: 72em;
+  margin: 0 auto;
+  width: 90%;
+  padding: 1rem 0;
+}
+
+@media screen and (min-width: 37.5em) {
+  .is-style-condensed .site-header-contain {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.is-style-condensed .site-branding {
+  padding: 0;
+  width: auto;
+}
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
   position: relative;
   width: 100%;
+}
+
+.is-style-stacked + .main-navigation {
   background: #eee;
+}
+
+.is-style-stacked + .main-navigation .main-navigation-contain {
+  max-width: 72em;
+  margin: 0 auto;
+  width: 90%;
+  position: relative;
+}
+
+.is-style-condensed .main-navigation .main-navigation-contain {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.is-style-condensed .main-navigation .main-navigation-contain .search-toggle {
+  position: static;
 }
 
 .stick {
@@ -704,10 +737,8 @@ a:focus {
 .main-navigation ul {
   display: none;
   list-style: none;
-  margin: 0 auto;
+  margin: 0;
   padding: 0.43em 0;
-  max-width: 72em;
-  width: 90%;
 }
 
 .main-navigation li:first-child {
@@ -895,7 +926,6 @@ a:focus {
 }
 
 .site-footer {
-  background: #eee;
   padding: 0 1.2em;
 }
 
