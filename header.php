@@ -25,10 +25,13 @@
 
 	<?php
 	$header_layout = get_theme_mod( 'winslow_header_layout' );
-	$header_layout_class = $header_layout == 'condensed' ? ' is-style-condensed' : ' is-style-stacked';
+	$header_customize_class = $header_layout == 'condensed' ? ' is-style-condensed' : ' is-style-stacked';
+
+	$header_sticky = get_theme_mod( 'winslow_header_sticky' );
+	$header_customize_class .= $header_sticky ? ' is-sticky' : '';
 	?>
 
-	<header id="masthead" class="site-header<?php echo $header_layout_class; ?>" role="banner">
+	<header id="masthead" class="site-header<?php echo $header_customize_class; ?>" role="banner">
 		<div class="site-header-contain">
 			<div class="site-branding">
 				<?php

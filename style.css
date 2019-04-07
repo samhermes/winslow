@@ -623,6 +623,17 @@ a:focus {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+.site-header.is-sticky.is-style-condensed {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.admin-bar .site-header.is-sticky.is-style-condensed {
+  position: initial;
+}
+
 .site-branding {
   padding: 2.5rem 0;
   margin: 0 auto;
@@ -708,7 +719,7 @@ a:focus {
 }
 
 .is-style-stacked + .main-navigation {
-  background: #eee;
+  background: #fff;
 }
 
 .is-style-stacked + .main-navigation .main-navigation-contain {
@@ -716,6 +727,17 @@ a:focus {
   margin: 0 auto;
   width: 90%;
   position: relative;
+}
+
+.is-style-stacked.is-sticky + .main-navigation {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.admin-bar .is-style-stacked.is-sticky + .main-navigation {
+  position: initial;
 }
 
 .is-style-condensed .main-navigation .main-navigation-contain {
@@ -726,12 +748,6 @@ a:focus {
 
 .is-style-condensed .main-navigation .main-navigation-contain .search-toggle {
   position: static;
-}
-
-.stick {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
 }
 
 .main-navigation ul {
@@ -845,7 +861,7 @@ a:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 9999;
   height: 0;
   overflow: hidden;
   opacity: 0;

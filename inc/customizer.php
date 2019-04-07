@@ -46,9 +46,9 @@ function winslow_customize_register( $wp_customize ) {
 		$wp_customize,
 		'winslow_header_background',
 		array(
-			'label'      => __( 'Background Color', 'winslow' ),
-			'section'    => 'winslow_header',
-			'settings'   => 'winslow_header_background',
+			'label' => __( 'Background Color', 'winslow' ),
+			'section' => 'winslow_header',
+			'settings' => 'winslow_header_background',
 		) )
 	);
 
@@ -62,14 +62,25 @@ function winslow_customize_register( $wp_customize ) {
 		$wp_customize,
 		'winslow_navigation_background',
 		array(
-			'label'      => __( 'Navigation Background Color', 'winslow' ),
-			'section'    => 'winslow_header',
-			'settings'   => 'winslow_navigation_background',
+			'label' => __( 'Navigation Background Color', 'winslow' ),
+			'section' => 'winslow_header',
+			'settings' => 'winslow_navigation_background',
 			'active_callback' => function( $control ) {
 				return $control->manager->get_setting( 'winslow_header_layout' )->value() === 'stacked';
 			}
 		) )
 	);
+
+	$wp_customize->add_setting( 'winslow_header_sticky', array(
+		'default' => false,
+		'transport' => 'refresh',
+	) );
+
+	$wp_customize->add_control( 'winslow_header_sticky', array(
+		'label' => __( 'Sticky' ),
+		'type' => 'checkbox',
+		'section' => 'winslow_header',
+	) );
 }
 add_action( 'customize_register', 'winslow_customize_register' );
 

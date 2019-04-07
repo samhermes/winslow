@@ -1,6 +1,19 @@
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+.site-header {
+	&.is-sticky.is-style-condensed {
+		position: -webkit-sticky;
+  	position: sticky;
+		top: 0;
+		z-index: 999;
+
+		.admin-bar & {
+			position: initial;
+		}
+	}
+}
+
 .site-branding {
 	padding: 2.5rem 0;
 	margin: 0 auto;
@@ -79,13 +92,24 @@
 	width: 100%;
 
 	.is-style-stacked + & {
-		background: #eee;
+		background: #fff;
 
 		.main-navigation-contain {
 			max-width: 72em;
 			margin: 0 auto;
 			width: 90%;
 			position: relative;
+		}
+	}
+
+	.is-style-stacked.is-sticky + & {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		z-index: 999;
+
+		.admin-bar & {
+			position: initial;
 		}
 	}
 
@@ -100,12 +124,6 @@
 			}
 		}
 	}
-}
-
-.stick {
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0;
 }
 
 .main-navigation ul {
@@ -222,7 +240,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	z-index: 1;
+	z-index: 9999;
 	height: 0;
 	overflow: hidden;
 	opacity: 0;
