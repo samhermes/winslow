@@ -35,8 +35,55 @@ function winslow_customize_register( $wp_customize ) {
 		'section' => 'winslow_header',
 		'settings' => 'winslow_header_layout',
 	) );
+
+	$wp_customize->add_setting( 'winslow_header_background' , array(
+		'default' => '#ffffff',
+		'transport' => 'refresh',
+	) );
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+		$wp_customize,
+		'winslow_header_background',
+		array(
+			'label'      => __( 'Background Color', 'winslow' ),
+			'section'    => 'winslow_header',
+			'settings'   => 'winslow_header_background',
+		) )
+	);
+
+	$wp_customize->add_setting( 'winslow_navigation_background' , array(
+		'default' => '#ffffff',
+		'transport' => 'refresh',
+	) );
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+		$wp_customize,
+		'winslow_navigation_background',
+		array(
+			'label'      => __( 'Navigation Background Color', 'winslow' ),
+			'section'    => 'winslow_header',
+			'settings'   => 'winslow_navigation_background',
+			'active_callback' => function( $control ) {
+				return $control->manager->get_setting( 'winslow_header_layout' )->value() === 'stacked';
+			}
+		) )
+	);
 }
 add_action( 'customize_register', 'winslow_customize_register' );
+
+function winslow_customizer_css() { ?>
+	<style>
+		.site-header { background-color: <?php echo get_theme_mod( 'winslow_header_background' ); ?>; }
+
+		<?php if ( get_theme_mod( 'winslow_header_layout' ) === 'stacked' ) { ?>
+		.is-style-stacked + .main-navigation { background-color: <?php echo get_theme_mod( 'winslow_navigation_background' ); ?>; }
+		<?php } ?>
+
+	</style>
+<?php }
+add_action( 'wp_head', 'winslow_customizer_css');
 
 /**
  * Add custom logo field to customizer, replaces site title in header.
@@ -60,3 +107,8 @@ function winslow_customize_preview_js() {
 	wp_enqueue_script( 'winslow_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'winslow_customize_preview_js' );
+/*
+function winslow_customize_controls_js() {
+	wp_enqueue_script( 'winslow_customizer_controls', get_template_directory_uri() . '/js/customizer-controls.js', array( 'customize-preview' ), false, true );
+}
+add_action( 'customize_controls_enqueue_scripts', 'winslow_customize_controls_js' ); */
