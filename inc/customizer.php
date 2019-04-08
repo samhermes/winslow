@@ -34,7 +34,10 @@ function winslow_customizer_css() { ?>
 		.custom-logo { width: <?php echo $logo_width; ?>rem; }
 		<?php } ?>
 
-		.site-footer { background-color: <?php echo get_theme_mod( 'winslow_footer_background' ); ?>; }
+		.site-footer {
+			background-color: <?php echo get_theme_mod( 'winslow_footer_background' ); ?>;
+			color: <?php echo get_theme_mod( 'winslow_footer_text_color' ); ?>
+		}
 	</style>
 <?php }
 add_action( 'wp_head', 'winslow_customizer_css');
