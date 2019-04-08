@@ -8,7 +8,7 @@
 function winslow_customize_footer( $wp_customize ) {
     $wp_customize->add_section( 'winslow_footer' , array(
 		'title' => __( 'Footer', 'winslow' ),
-		'priority' => 31,
+		'priority' => 100,
 	) );
 
 	$wp_customize->add_setting( 'winslow_footer_background' , array(
