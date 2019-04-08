@@ -20,5 +20,18 @@ function winslow_customize_site_identity( $wp_customize ) {
         'settings' => 'winslow_logo_width',
         'input_attrs' => array( 'min' => 0, 'max' => 500 ),
     ) );
+
+    $wp_customize->add_setting( 'winslow_title_transform' , array(
+		'default' => true,
+		'transport' => 'refresh',
+	) );
+
+	$wp_customize->add_control( 'winslow_title_transform', array(
+        'label' => __( 'Use Uppercase for Site Title', 'winslow' ),
+		'type' => 'checkbox',
+        'section' => 'title_tagline',
+        'priority' => 12,
+        'settings' => 'winslow_title_transform',
+    ) );
 }
 add_action( 'customize_register', 'winslow_customize_site_identity' );

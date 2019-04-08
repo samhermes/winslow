@@ -38,10 +38,20 @@
 				if ( has_custom_logo() ) :
 					the_custom_logo();
 				else :
+					$site_title_class = get_theme_mod( 'winslow_title_transform' ) ? ' is-style-uppercase' : '';
+
 					if ( is_front_page() && is_home() ) : ?>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<h1 class="site-title<?php echo $site_title_class; ?>">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+								<?php bloginfo( 'name' ); ?>
+							</a>
+						</h1>
 					<?php else : ?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+						<p class="site-title<?php echo $site_title_class; ?>">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+								<?php bloginfo( 'name' ); ?>
+							</a>
+						</p>
 					<?php
 					endif;
 				endif;

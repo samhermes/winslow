@@ -70,7 +70,8 @@ function winslow_customize_header( $wp_customize ) {
 	$wp_customize->add_control( 'winslow_header_sticky', array(
 		'label' => __( 'Sticky' ),
 		'type' => 'checkbox',
-		'section' => 'winslow_header',
+        'section' => 'winslow_header',
+        'settings' => 'winslow_header_sticky',
     ) );
 }
 add_action( 'customize_register', 'winslow_customize_header' );
