@@ -27,6 +27,18 @@ function winslow_customize_header( $wp_customize ) {
 		'settings' => 'winslow_header_layout',
 	) );
 
+	$wp_customize->add_setting( 'winslow_header_sticky', array(
+		'default' => false,
+		'transport' => 'refresh',
+	) );
+
+	$wp_customize->add_control( 'winslow_header_sticky', array(
+		'label' => __( 'Sticky' ),
+		'type' => 'checkbox',
+        'section' => 'winslow_header',
+        'settings' => 'winslow_header_sticky',
+    ) );
+
 	$wp_customize->add_setting( 'winslow_header_background' , array(
 		'default' => '#ffffff',
 		'transport' => 'refresh',
@@ -40,6 +52,22 @@ function winslow_customize_header( $wp_customize ) {
 			'label' => __( 'Background Color', 'winslow' ),
 			'section' => 'winslow_header',
 			'settings' => 'winslow_header_background',
+		) )
+	);
+
+	$wp_customize->add_setting( 'winslow_title_text_color' , array(
+		'default' => '#404040',
+		'transport' => 'refresh',
+	) );
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+		$wp_customize,
+		'winslow_title_text_color',
+		array(
+			'label' => __( 'Site Title Text Color', 'winslow' ),
+            'section' => 'winslow_header',
+			'settings' => 'winslow_title_text_color',
 		) )
 	);
 
@@ -62,16 +90,20 @@ function winslow_customize_header( $wp_customize ) {
 		) )
 	);
 
-	$wp_customize->add_setting( 'winslow_header_sticky', array(
-		'default' => false,
+	$wp_customize->add_setting( 'winslow_navigation_text_color' , array(
+		'default' => '#404040',
 		'transport' => 'refresh',
 	) );
 
-	$wp_customize->add_control( 'winslow_header_sticky', array(
-		'label' => __( 'Sticky' ),
-		'type' => 'checkbox',
-        'section' => 'winslow_header',
-        'settings' => 'winslow_header_sticky',
-    ) );
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+		$wp_customize,
+		'winslow_navigation_text_color',
+		array(
+			'label' => __( 'Navigation Text Color', 'winslow' ),
+			'section' => 'winslow_header',
+			'settings' => 'winslow_navigation_text_color',
+		) )
+	);
 }
 add_action( 'customize_register', 'winslow_customize_header' );

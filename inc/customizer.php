@@ -23,20 +23,42 @@ require get_template_directory() . '/inc/customizer/footer.php';
 
 function winslow_customizer_css() { ?>
 	<style>
-		.site-header { background-color: <?php echo get_theme_mod( 'winslow_header_background' ); ?>; }
+		.site-header {
+			background-color: <?php echo get_theme_mod( 'winslow_header_background' ); ?>;
+		}
+
+		.site-title a {
+			color: <?php echo get_theme_mod( 'winslow_title_text_color' ); ?>;
+		}
 
 		<?php if ( get_theme_mod( 'winslow_header_layout' ) === 'stacked' ) { ?>
-		.is-style-stacked + .main-navigation { background-color: <?php echo get_theme_mod( 'winslow_navigation_background' ); ?>; }
+		.is-style-stacked + .main-navigation {
+			background-color: <?php echo get_theme_mod( 'winslow_navigation_background' ); ?>;
+		}
 		<?php } ?>
 
 		<?php if ( $logo_width = get_theme_mod( 'winslow_logo_width' ) ) {
 			$logo_width = $logo_width / 16; ?>
-		.custom-logo { width: <?php echo $logo_width; ?>rem; }
+		.custom-logo {
+			width: <?php echo $logo_width; ?>rem;
+		}
 		<?php } ?>
+
+		.main-navigation a {
+			color: <?php echo get_theme_mod( 'winslow_navigation_text_color' ); ?>;
+		}
+
+		.search-toggle .glass {
+			fill: <?php echo get_theme_mod( 'winslow_navigation_text_color' ); ?>;
+		}
+
+		.search-toggle .handle {
+			stroke: <?php echo get_theme_mod( 'winslow_navigation_text_color' ); ?>;
+		}
 
 		.site-footer {
 			background-color: <?php echo get_theme_mod( 'winslow_footer_background' ); ?>;
-			color: <?php echo get_theme_mod( 'winslow_footer_text_color' ); ?>
+			color: <?php echo get_theme_mod( 'winslow_footer_text_color' ); ?>;
 		}
 	</style>
 <?php }

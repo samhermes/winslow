@@ -64,13 +64,13 @@
 			</div>
 
 			<?php if ( $header_layout === 'condensed' ) {
-				get_template_part( 'inc/main-navigation' );
+				get_template_part( 'template-parts/main-navigation' );
 			} ?>
 		</div>
 	</header>
 
 	<?php if ( $header_layout === 'stacked' ) {
-		get_template_part( 'inc/main-navigation' );
+		get_template_part( 'template-parts/main-navigation' );
 	} ?>
 
 	<div class="search-overlay">
