@@ -18,11 +18,26 @@ function winslow_customize_register( $wp_customize ) {
 add_action( 'customize_register', 'winslow_customize_register' );
 
 require get_template_directory() . '/inc/customizer/site-identity.php';
+require get_template_directory() . '/inc/customizer/page-layout.php';
 require get_template_directory() . '/inc/customizer/header.php';
 require get_template_directory() . '/inc/customizer/footer.php';
 
 function winslow_customizer_css() { ?>
 	<style>
+		<?php
+		$layout_width = get_theme_mod( 'winslow_layout_width' );
+		$layout_width_em = $layout_width / 16;
+		?>
+		.site-branding,
+		.is-style-condensed .site-header-contain,
+		.is-style-stacked .main-navigation-contain {
+			max-width: <?php echo $layout_width_em; ?>em;
+		}
+
+		.site-footer .widget-area {
+			max-width: <?php echo $layout_width_em + 2; ?>em;
+		}
+
 		.site-header {
 			background-color: <?php echo get_theme_mod( 'winslow_header_background' ); ?>;
 		}
