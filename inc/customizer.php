@@ -25,12 +25,12 @@ require get_template_directory() . '/inc/customizer/footer.php';
 function winslow_customizer_css() { ?>
 	<style>
 		<?php
-		$layout_width = get_theme_mod( 'winslow_layout_width' );
+		$layout_width = get_theme_mod( 'winslow_layout_width' ) ? get_theme_mod( 'winslow_layout_width' ) : '1152';
 		$layout_width_em = $layout_width / 16;
 		?>
 		.site-branding,
 		.is-style-condensed .site-header-contain,
-		.is-style-stacked .main-navigation-contain {
+		.is-style-stacked + .main-navigation .main-navigation-contain {
 			max-width: <?php echo $layout_width_em; ?>em;
 		}
 
@@ -46,6 +46,7 @@ function winslow_customizer_css() { ?>
 			$identity_height = $identity_height / 16; ?>
 		.site-branding {
 			height: <?php echo $identity_height; ?>rem;
+			padding: 0;
 		}
 		<?php } ?>
 
@@ -63,6 +64,13 @@ function winslow_customizer_css() { ?>
 			$logo_width = $logo_width / 16; ?>
 		.custom-logo {
 			width: <?php echo $logo_width; ?>rem;
+		}
+		<?php } ?>
+
+		<?php if ( $navigation_height = get_theme_mod( 'winslow_navigation_height' ) ) {
+			$navigation_height = $navigation_height / 16; ?>
+		.main-navigation {
+			height: <?php echo $navigation_height; ?>rem;
 		}
 		<?php } ?>
 

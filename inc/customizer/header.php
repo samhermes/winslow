@@ -84,6 +84,19 @@ function winslow_customize_header( $wp_customize ) {
 		) )
 	);
 
+	$wp_customize->add_setting( 'winslow_navigation_height' , array(
+		'default' => '',
+		'transport' => 'refresh',
+	) );
+
+	$wp_customize->add_control( 'winslow_navigation_height', array(
+        'label' => __( 'Navigation Height', 'winslow' ),
+        'description' => __( 'In pixels, the height of the container around the site navigation.', 'winslow' ),
+		'type' => 'number',
+        'section' => 'winslow_header',
+        'settings' => 'winslow_navigation_height',
+    ) );
+
 	$wp_customize->add_setting( 'winslow_navigation_background' , array(
 		'default' => '#ffffff',
 		'transport' => 'refresh',
