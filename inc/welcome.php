@@ -24,7 +24,7 @@ function winslow_welcome_screen_do_activation_redirect() {
 
     // Redirect to bbPress about page
     wp_safe_redirect(
-        add_query_arg( array( 'page' => 'welcome' ),admin_url( 'index.php' ) )
+        add_query_arg( array( 'page' => 'winslow-welcome' ),admin_url( 'index.php' ) )
     );
 }
 add_action( 'admin_init', 'winslow_welcome_screen_do_activation_redirect' );
@@ -34,7 +34,7 @@ function winslow_add_welcome_screen_page() {
         'Welcome To Winslow',
         'Welcome To Winslow',
         'read',
-        'welcome',
+        'winslow-welcome',
         'winslow_welcome_screen_content'
     );
 }
@@ -51,6 +51,6 @@ function winslow_welcome_screen_content() {
 }
 
 function winslow_welcome_screen_remove_menus() {
-    remove_submenu_page( 'index.php', 'welcome' );
+    remove_submenu_page( 'index.php', 'winslow-welcome' );
 }
 add_action( 'admin_head', 'winslow_welcome_screen_remove_menus' );
