@@ -212,6 +212,11 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
+ * Welcome screen after theme activation.
+ */
+require get_template_directory() . '/inc/welcome.php';
+
+/**
  * Filter the except length.
  */
 function winslow_custom_excerpt_length( $length ) {
