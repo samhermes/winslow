@@ -42,6 +42,13 @@ function winslow_customizer_css() { ?>
 			background-color: <?php echo get_theme_mod( 'winslow_header_background' ); ?>;
 		}
 
+		<?php if ( $identity_height = get_theme_mod( 'winslow_identity_height' ) ) {
+			$identity_height = $identity_height / 16; ?>
+		.site-branding {
+			height: <?php echo $identity_height; ?>rem;
+		}
+		<?php } ?>
+
 		.site-title a {
 			color: <?php echo get_theme_mod( 'winslow_title_text_color' ); ?>;
 		}

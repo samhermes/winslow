@@ -55,6 +55,19 @@ function winslow_customize_header( $wp_customize ) {
 		) )
 	);
 
+	$wp_customize->add_setting( 'winslow_identity_height' , array(
+		'default' => '',
+		'transport' => 'refresh',
+	) );
+
+	$wp_customize->add_control( 'winslow_identity_height', array(
+        'label' => __( 'Site Identity Height', 'winslow' ),
+        'description' => __( 'In pixels, the height of the container around either the site logo or title.', 'winslow' ),
+		'type' => 'number',
+        'section' => 'winslow_header',
+        'settings' => 'winslow_identity_height',
+    ) );
+
 	$wp_customize->add_setting( 'winslow_title_text_color' , array(
 		'default' => '#404040',
 		'transport' => 'refresh',
