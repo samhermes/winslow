@@ -22,13 +22,17 @@ get_header(); ?>
 				?>
 			</header>
 
+			<div class="posts-grid">
 			<?php
 			while ( have_posts() ) : the_post();
 
 				get_template_part( 'template-parts/content', 'archive' );
 
 			endwhile;
+			?>
+			</div>
 
+			<?php
 			winslow_pagination();
 
 		else :

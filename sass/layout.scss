@@ -1,11 +1,17 @@
 /*--------------------------------------------------------------
 # Post Layouts
 --------------------------------------------------------------*/
+.blog,
 .archive,
 .search {
 	.content-area {
 		max-width: 72em;
-		margin: 0 auto;
+		margin: 1.25rem auto 3rem;
+		width: 90%;
+
+		@media screen and (min-width: $break-37) {
+			margin: 3rem auto 5rem;
+		}
 	}
 
 	.page-header {
@@ -53,17 +59,23 @@
 	.entry-content {
 		font-size: 1.2em;
 	}
+}
+
+.posts-grid {
+	margin: 2rem 0;
+
+	@media screen and (min-width: $break-28) {
+		display: grid;
+		grid-gap: 3rem;
+		grid-template-columns: repeat(2, 1fr);
+	}
 
 	@media screen and (min-width: $break-50) {
-		.featured-image {
-			float: left;
-			width: 29.34%;
-		}
+		grid-template-columns: repeat(4, 1fr);
+	}
 
-		.entry-header,
-		.entry-content {
-			float: right;
-			width: 67.66%;
+	.post {
+		@media screen and (min-width: $break-37) {
 		}
 	}
 }

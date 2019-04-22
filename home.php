@@ -12,43 +12,22 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php
-		$intro_query = new WP_Query( winslow_get_featured_args() );
-
-		if ( $intro_query->have_posts() && !is_paged() ) :
-			echo '<div class="intro-posts">';
-			$first = true;
-			while ( $intro_query->have_posts() ) : $intro_query->the_post();
-				if ( ! false == $first ) {
-
-					get_template_part( 'template-parts/content', 'featured' );
-					$first = false;
-
-				} else {
-
-					get_template_part( 'template-parts/content', 'home' );
-
-				}
-			endwhile;
-			wp_reset_postdata();
-			echo '</div>';
-		endif; ?>
-
 		<?php if ( have_posts() ) : ?>
-		<div class="latest-feed archive">
-			<h2 class="latest-heading"><?php esc_html_e( 'Latest', 'winslow' ); ?></h2>
-			<?php
 
-				while ( have_posts() ) : the_post();
+		<div class="posts-grid">
 
-					get_template_part( 'template-parts/content', 'archive' );
+			<?php while ( have_posts() ) : the_post();
 
-				endwhile;
+				get_template_part( 'template-parts/content', 'archive' );
 
-			winslow_pagination(); ?>
+			endwhile; ?>
 
 		</div>
-		<?php endif; ?>
+
+			<?php
+			winslow_pagination();
+
+		endif; ?>
 
 		</main>
 	</div>
