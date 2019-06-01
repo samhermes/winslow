@@ -2,7 +2,7 @@
     <div class="main-navigation-contain">
         <button type="button" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'winslow' ); ?></button>
 
-        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'depth' => 1 ) ); ?>
+        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'depth' => 2 ) ); ?>
 
         <button type="button" class="search-toggle">
             <svg xmlns="http://www.w3.org/2000/svg" width="42.8" height="42.8" viewBox="0 0 42.8 42.8" id="search-icon">
