@@ -38,7 +38,8 @@ function winslow_customizer_css() { ?>
 			max-width: <?php echo $layout_width_em + 2; ?>em;
 		}
 
-		.site-header {
+		.site-header,
+		.main-navigation .sub-menu {
 			background-color: <?php echo get_theme_mod( 'winslow_header_background' ); ?>;
 		}
 
@@ -55,7 +56,8 @@ function winslow_customizer_css() { ?>
 		}
 
 		<?php if ( get_theme_mod( 'winslow_header_layout' ) === 'stacked' ) { ?>
-		.is-style-stacked + .main-navigation {
+		.is-style-stacked + .main-navigation,
+		.main-navigation .sub-menu { {
 			background-color: <?php echo get_theme_mod( 'winslow_navigation_background' ); ?>;
 		}
 		<?php } ?>

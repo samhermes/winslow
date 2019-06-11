@@ -1,6 +1,10 @@
 /*--------------------------------------------------------------
 # Post Layouts
 --------------------------------------------------------------*/
+.site-content {
+	min-height: 25rem;
+}
+
 .blog,
 .archive,
 .search {
@@ -15,7 +19,7 @@
 	}
 
 	.page-header {
-		margin: 3rem 0 2.5rem;
+		margin: 3rem 0;
 
 		.page-title {
 			margin: 0;
