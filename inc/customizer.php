@@ -30,7 +30,6 @@ function winslow_customizer_css() { ?>
 		?>
 		.site-branding,
 		.is-style-condensed .site-header-contain,
-		.is-style-stacked + .main-navigation .main-navigation-contain,
 		.blog .content-area,
 		.archive .content-area,
 		.search .content-area,
@@ -38,8 +37,10 @@ function winslow_customizer_css() { ?>
 			max-width: <?php echo $layout_width_em; ?>rem;
 		}
 
+		.is-style-stacked + .main-navigation .main-navigation-contain,
 		.site-footer .widget-area {
 			max-width: <?php echo $layout_width_em + 2; ?>rem;
+			width: calc(90% + 2rem);
 		}
 
 		.site-header,
