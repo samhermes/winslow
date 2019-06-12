@@ -25,6 +25,11 @@ body.block-editor-page {
                 font-size: 1.4rem;
             }
         }
+
+        figcaption {
+            width: 90%;
+            max-width: 45rem;
+        }
     }
 
     .editor-post-title__input {

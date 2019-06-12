@@ -1,3 +1,24 @@
+.wp-block-image {
+    margin-bottom: 1.5rem;
+
+    figcaption {
+        margin: 0.5rem auto 2.5rem;
+        text-align: left;
+
+        @media screen and (min-width: $break-37) {
+            margin: 0.5rem auto 3.5rem;
+        }
+    }
+
+    &.alignfull,
+    &.alignwide {
+        figcaption {
+            width: 90%;
+            max-width: 50rem;
+        }
+    }
+}
+
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
     max-width: 8rem;
 }

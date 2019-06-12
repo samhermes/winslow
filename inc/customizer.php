@@ -30,12 +30,13 @@ function winslow_customizer_css() { ?>
 		?>
 		.site-branding,
 		.is-style-condensed .site-header-contain,
-		.is-style-stacked + .main-navigation .main-navigation-contain {
-			max-width: <?php echo $layout_width_em; ?>em;
+		.is-style-stacked + .main-navigation .main-navigation-contain,
+		.wp-block-image.alignwide {
+			max-width: <?php echo $layout_width_em; ?>rem;
 		}
 
 		.site-footer .widget-area {
-			max-width: <?php echo $layout_width_em + 2; ?>em;
+			max-width: <?php echo $layout_width_em + 2; ?>rem;
 		}
 
 		.site-header,
