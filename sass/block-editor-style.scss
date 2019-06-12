@@ -8,6 +8,18 @@ body.block-editor-page {
     .edit-post-visual-editor {
         font-family: 'Heebo', sans-serif;
 
+        .wp-block {
+            max-width: 51.875rem;
+
+            &[data-align="full"] {
+                max-width: none;
+            }
+
+            &[data-align="wide"] {
+                max-width: 72rem;
+            }
+        }
+
         .wp-block-paragraph {
             font-size: 1.1rem;
             line-height: 1.5;
@@ -27,8 +39,12 @@ body.block-editor-page {
         }
 
         figcaption {
-            width: 90%;
-            max-width: 45rem;
+            max-width: 50rem;
+
+            &[data-align="full"],
+            &[data-align="wide"] {
+                width: 90%;
+            }
         }
     }
 
