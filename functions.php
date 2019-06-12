@@ -161,7 +161,7 @@ add_action( 'wp_enqueue_scripts', 'winslow_scripts' );
  * Add editor styles.
  */
 function winslow_editor_styles() {
-    $font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Libre+Franklin:400,400i,600,600i' );
+    $font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Heebo:300,400,500' );
     add_editor_style( $font_url );
     add_editor_style();
 }
@@ -177,7 +177,7 @@ function winslow_block_editor_styles() {
 	wp_enqueue_style( 'winslow-block-editor-styles', get_theme_file_uri( '/block-editor-style.css' ), false, $this_version );
 
 	// Add Google fonts to editor
-	wp_enqueue_style( 'winslow-editor-fonts', 'https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,600,600i' );
+	wp_enqueue_style( 'winslow-editor-fonts', 'https://fonts.googleapis.com/css?family=Heebo:300,400,500' );
 }
 add_action( 'enqueue_block_editor_assets', 'winslow_block_editor_styles' );
 
