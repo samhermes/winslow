@@ -31,6 +31,9 @@ function winslow_customizer_css() { ?>
 		.site-branding,
 		.is-style-condensed .site-header-contain,
 		.is-style-stacked + .main-navigation .main-navigation-contain,
+		.blog .content-area,
+		.archive .content-area,
+		.search .content-area,
 		.wp-block-image.alignwide {
 			max-width: <?php echo $layout_width_em; ?>rem;
 		}
@@ -58,7 +61,7 @@ function winslow_customizer_css() { ?>
 
 		<?php if ( get_theme_mod( 'winslow_header_layout' ) === 'stacked' ) { ?>
 		.is-style-stacked + .main-navigation,
-		.main-navigation .sub-menu { {
+		.main-navigation .sub-menu {
 			background-color: <?php echo get_theme_mod( 'winslow_navigation_background' ); ?>;
 		}
 		<?php } ?>
